@@ -1,0 +1,17 @@
+<div data-role="view" id="view-menu" data-layout="default" class="offers-view" data-model="app.Menu">
+    <div data-role="header">
+        <div data-role="navbar">
+            Menu
+            <a class="nav-button nav-button-back hide-text" data-align="left" data-role="backbutton" data-click="app.Menu.logout">Log out</a>
+        </div>
+    </div>
+    <h1 class="app-logo btn hide-text center-block">Car Share</h1>
+    <br>
+    <div class="menu-offers" data-role="touch" data-bind="events: { tap: loadDrivers }">
+        <strong>Drivers Offers</strong>
+    </div>
+    <br>
+    <div class="menu-offers" data-role="touch" data-bind="events: { tap: loadPassengers }">
+        <strong>Passengers Offers</strong>
+    </div>
+</div>

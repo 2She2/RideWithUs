@@ -1,0 +1,32 @@
+<div data-role="view" id="share" data-layout="default" data-transition="overlay:down" class="add-offer-view" 
+     data-init="app.AddDriverOffer.init" data-show="app.AddDriverOffer.show" data-model="app.AddDriverOffer">
+    <div data-role="header">
+        <div data-role="navbar">
+            Driver Offer
+            <a class="nav-button nav-button-cancel" data-align="left" data-role="backbutton">Cancel</a>
+            <a class="nav-button nav-button-post" data-align="right" data-role="button" data-bind="click: saveOffer">Post</a>
+        </div>
+    </div>
+    <div id="enterStatus" class="share-form-wrp" data-role="listview" data-style="inset">
+        <div class="user-avatar">
+            <img data-bind="attr:{src: me.get('data').PictureUrl}" alt="styles/images/avatar.png" />
+        </div>
+        <h2 class="person-name" data-bind="text: me.get('data').DisplayName">Me</h2>
+        <div class="user-share">
+            <input type="text" class="comment-content" id="locationTitle" placeholder="Where are you?" required validationMessage="Location is required!" />
+            <input type="text" class="comment-content" id="destinationTitle" placeholder="Where are you going?" required validationMessage="Destination is required!" />
+            <input type="text" class="comment-content" id="timeLeaving" placeholder="Leaving after?" required validationMessage="Waiting is required!" />
+            <br />            
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <input type="number" class="comment-content" id="freeSeats" placeholder="Free seats" required validationMessage="Free seats are required!" min="0" step="1" max="4" />
+            
+        </div>
+    </div>
+</div>

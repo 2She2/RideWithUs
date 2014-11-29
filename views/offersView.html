@@ -1,0 +1,33 @@
+<div data-role="view" id="view-all-passengers-offers" data-layout="default" class="offers-view" data-model="app.Offers">
+    <div data-role="header">
+        <div data-role="navbar">
+            Passengers Offers
+            <a class="nav-button nav-button-back hide-text" data-align="left" data-role="backbutton">Back</a>
+            <a class="nav-button nav-button-add hide-text" data-align="right" data-role="button" href="views/addOfferView.html">Add</a>
+        </div>
+    </div>
+
+    <ul id="offers-listview" data-style="inset" data-role="listview" data-template="offerTemplate"
+        data-bind="source: passengersOffers"></ul>
+    <p id="no-offers-span" hidden="hidden" class="no-items-msg">
+        <b>You have no posts yet.</b><br /><br />Tap on the plus sign and share what's on your mind.
+    </p>
+</div>
+
+<!-- Offers ListView Template -->
+<script type="text/x-kendo-template" id="offerTemplate">
+    <div data-role="touch" data-bind="events: { tap: passengerSelected }" class="cf">
+        <div class="user-avatar">
+            <img data-bind="attr:{src: User().PictureUrl}" alt="styles/images/avatar.png" />
+        </div>
+        <div class="offer-content">
+            <h2 class="person-name">${User().DisplayName}</h2>
+            <span class="time-span">${CreatedAtFormatted()}</span>
+            <a class="user-share-txt"><strong>From:</strong> ${LocationTitle}</a>
+            <br>
+            <a class="user-share-txt"><strong>To:</strong> ${DestinationTitle}</a>
+            <br>
+            <span><strong>Leaving after:</strong> ${TimeLeaving}</span>
+        </div>
+    </div>
+</script>
